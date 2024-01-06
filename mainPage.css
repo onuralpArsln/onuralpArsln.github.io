@@ -91,7 +91,7 @@ body {
     justify-content: center;
     width: 600px;
 
-    height: 600px;
+    height: 100px;
     background-color: azure;
     border-radius: 5%;
     margin-bottom: 30px;
@@ -104,5 +104,5 @@ body {
 .clickableCard:checked + .clickableCardLabel{
     width: 600px;
     border-radius: 35px;
-    height: 100px;
+    height: 600px;
 }
