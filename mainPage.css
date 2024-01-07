@@ -90,7 +90,7 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 600px;
-    height: 100px;
+    height: 150px;
     background-color: azure;
     border-radius: 35px;
     margin-bottom: 30px;
@@ -105,3 +105,28 @@ body {
     height: 600px;
 }
 
+.collapsedCardContext{
+    margin-top: 20px;
+}
+
+.projectLink{
+    margin-bottom: 20px;
+}
+
+.clickableCardLabel:after{
+    content: 'Click for more info'; /* Non-breaking space */
+    position: absolute;
+    transform: translateY(50px);
+    width: 550px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 10px;
+    transition: all 0.5s ease;
+}
+
+.clickableCard:checked + .clickableCardLabel:after{
+    height: 450px;
+    content: 'This is a UI project collection that only uses pure CSS and HTML so it can be applicable to most of web development framewroks hustle free'; 
+
+}
