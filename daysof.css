@@ -80,265 +80,51 @@ body {
     background: linear-gradient(rgba(153, 1, 172, 1), rgba(0, 212, 255, 1));
 }
 
-#darkmodetoggle {
-    width: 0px;
-    height: 0px;
-    visibility: hidden;
-}
 
-
-
-
-
-.darkmodetogglelabel {
-    margin: 10px;
-    width: 500px;
-    height: 200px;
-    position: relative;
+#buttonspace{
     display: block;
-    background: #ebebeb;
-    border-radius: 200px;
-    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-/* :after is psuedo child for devcorative no need to show in html */
-.darkmodetogglelabel:after {
-    content: "";
-    width: 180px;
-    height: 180px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: linear-gradient(180deg, #ffcc89, #d8860b);
-    border-radius: 180px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s;
-}
-
-#darkmodetoggle:checked+.darkmodetogglelabel {
-    background: #242424;
-}
-
-
-#darkmodetoggle:checked+.darkmodetogglelabel:after {
-    background-color: #242424;
-    left: 490px;
-    transform: translate(-100%);
-    background: linear-gradient(180deg, #777, #3a3a3a);
-
-}
-
-/* when label is clicked it is active and thus after changes shape yet it reverts back*/
-.darkmodetogglelabel:active:after {
-    width: 260px;
-    background: linear-gradient(90deg, #777, #ffcc89);
-}
-
-
-
-
-/* causes a bounce and after it needs time to settle in */
-
-.radioMagic {
-    transition: all 3s;
-}
-
-.radioMagic:checked {
-    width: 1rem;
-}
-
-.radioMagic:active {
-    margin-right: 10px;
-    width: 3rem;
-    height: 3rem;
-}
-
-
-
-.flex-container {
-    margin: 10px;
-    border: solid salmon 5px;
-    border-radius: 15px;
-    width: 500px;
-    height: 500px;
-    display: grid;
-    /* repeats colum size 60px 3 times  */
-    /*  / separtes column and row definitrion */
-    /*  auto *flow creates required amount of rows with given 80px size  */
-    grid: repeat(3, 1fr) / auto-flow 1fr;
-
-
-    overflow: hidden;
-
-
-}
-
-.flex-item {
-
-
-
-    border: 1px solid green;
-    transition: all 2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 2s ;
-
-}
-
-.flex-item:hover {
     width: 200px;
     height: 200px;
-    background-color: green;
+    
+    border: solid green 5px; 
+    background-color: red;
+
 }
 
-.flex-item:hover::after {
-    /*  make it new line \n doesnt work  */
+#menubutton{
+    
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top :0px;
+    /*
+    visibility: hidden;
+    */
+    
+}
 
-    content: "hello   you are hovering me ";
+
+
+.menubuttonlabel {
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top :0px;
+    
     display: block;
-}
 
-
-
-.parallaxFrame {
-
-
-    border: solid rgb(200, 44, 26) 5px;
-    border-radius: 15px;
-    width: 450px;
-    height: 450px;
-    display: flex;
-    flex-direction: column;
-
-}
-
-
-
-
-
-
-/*  css + adjacent sibling combinator */
-/*  css ~ adjacent sibling combinator but looser */
-
-
-.positionTop:hover  ~ .frontParal{
-    transform: translateY(170px);
    
-   
-}
-.positionMid:hover  ~ .frontParal{
-    transform: translate( 20px , 150px ) ;
-  
-}
-.positionBot:hover  ~ .frontParal{
-    transform: translateY(130px);
-   
-  
-}
-
-
-.positionTop:hover  ~ .midParal{
-    transform: translateY(200px);
-   
-   
-}
-.positionMid:hover  ~ .midParal{
-    transform: translate( 40px , 150px ) ;
-
-  
-}
-.positionBot:hover  ~ .midParal{
-    transform: translateY(100px);
-   
-  
-}
-
-
-
-
-.positionTop:hover  ~ .backParal{
-    transform: translateY(240px);
-   
-   
-}
-.positionMid:hover  ~ .backParal{
-    transform: translate(60px , 150px  ) ;
-   
-  
-}
-.positionBot:hover  ~ .backParal{
-    transform: translateY(60px);
-   
-  
-}
-
-.frontParal:hover{background-color: red;}
-
-
-
-.frontParal {
-    z-index: 5;
-    width: 350px;
-    height: 150px;
-    position: absolute;
-
-    background-color: green;
-    transition: all 1.5s ease;
-    transform: translateY(150px);
-  
-
-}
-
-.midParal {
-    z-index: 4;
-    width: 350px;
-    height: 150px;
-    position: absolute;
+    cursor: pointer;
     
-    transition: all 1s ease;
-    background-color: greenyellow;
-    transform: translateY(140px);
-   
-}
-
-.backParal {
-    z-index: 3;
-    width: 350px;
-    height: 150px;
-    position: absolute;
-   
-    transition: all 0.5s ease;
-    background-color: yellow;
-    transform: translateY(130px);
-   
+    transition: all 0.3s;
+    border-top : solid red 4px;
+    border-bottom: solid red 4px;
 }
 
 
-.positionTop{
-    z-index: 2;
-    z-index: 12;
-    width: 450px;
-    height: 150px;
+#menubutton:checked + .menubuttonlabel {
+    height: 0px;
+    transform: rotate(45deg);
 
-    
 }
-
-.positionMid{
-    z-index: 12;
-    width: 450px;
-    height: 150px;
-    
-}
-
-.positionBot{
-    z-index: 12;
-    width: 450px;
-    height: 150px;
-    
-}
-
-
-
