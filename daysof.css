@@ -41,8 +41,13 @@ body {
     align-items: center;
 
     flex-direction: column;
-    z-index: 1
+    z-index: 1;
+    
 }
+
+::-webkit-scrollbar {
+    width: 0px;
+  }
 
 html {
     overflow: auto;
@@ -50,7 +55,10 @@ html {
 }
 
 
-
+/* Hide scrollbar for chrome */
+body::-webkit-scrollbar {
+    display: none;
+}
 
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
@@ -59,11 +67,6 @@ body {
     scrollbar-width: none;
     /* Firefox */
 }
-
-/* hide scroll for all */
-::-webkit-scrollbar {
-    width: 0px;
-  }
 
 
 /* adds sticky bg */
@@ -77,59 +80,265 @@ body {
     background: linear-gradient(rgba(153, 1, 172, 1), rgba(0, 212, 255, 1));
 }
 
-/* uses checkbox input as a two style clickable  */
-.clickableCard {
+#darkmodetoggle {
     width: 0px;
     height: 0px;
     visibility: hidden;
+}
+
+
+
+
+
+.darkmodetogglelabel {
+    margin: 10px;
+    width: 500px;
+    height: 200px;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* :after is psuedo child for devcorative no need to show in html */
+.darkmodetogglelabel:after {
+    content: "";
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+#darkmodetoggle:checked+.darkmodetogglelabel {
+    background: #242424;
+}
+
+
+#darkmodetoggle:checked+.darkmodetogglelabel:after {
+    background-color: #242424;
+    left: 490px;
+    transform: translate(-100%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
 
 }
-/* art goes into label part */
 
-.clickableCardLabel{
+/* when label is clicked it is active and thus after changes shape yet it reverts back*/
+.darkmodetogglelabel:active:after {
+    width: 260px;
+    background: linear-gradient(90deg, #777, #ffcc89);
+}
+
+
+
+
+/* causes a bounce and after it needs time to settle in */
+
+.radioMagic {
+    transition: all 3s;
+}
+
+.radioMagic:checked {
+    width: 1rem;
+}
+
+.radioMagic:active {
+    margin-right: 10px;
+    width: 3rem;
+    height: 3rem;
+}
+
+
+
+.flex-container {
+    margin: 10px;
+    border: solid salmon 5px;
+    border-radius: 15px;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    /* repeats colum size 60px 3 times  */
+    /*  / separtes column and row definitrion */
+    /*  auto *flow creates required amount of rows with given 80px size  */
+    grid: repeat(3, 1fr) / auto-flow 1fr;
+
+
+    overflow: hidden;
+
+
+}
+
+.flex-item {
+
+
+
+    border: 1px solid green;
+    transition: all 2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 2s ;
+
+}
+
+.flex-item:hover {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+}
+
+.flex-item:hover::after {
+    /*  make it new line \n doesnt work  */
+
+    content: "hello   you are hovering me ";
+    display: block;
+}
+
+
+
+.parallaxFrame {
+
+
+    border: solid rgb(200, 44, 26) 5px;
+    border-radius: 15px;
+    width: 450px;
+    height: 450px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 600px;
+
+}
+
+
+
+
+
+
+/*  css + adjacent sibling combinator */
+/*  css ~ adjacent sibling combinator but looser */
+
+
+.positionTop:hover  ~ .frontParal{
+    transform: translateY(170px);
+   
+   
+}
+.positionMid:hover  ~ .frontParal{
+    transform: translate( 20px , 150px ) ;
+  
+}
+.positionBot:hover  ~ .frontParal{
+    transform: translateY(130px);
+   
+  
+}
+
+
+.positionTop:hover  ~ .midParal{
+    transform: translateY(200px);
+   
+   
+}
+.positionMid:hover  ~ .midParal{
+    transform: translate( 40px , 150px ) ;
+
+  
+}
+.positionBot:hover  ~ .midParal{
+    transform: translateY(100px);
+   
+  
+}
+
+
+
+
+.positionTop:hover  ~ .backParal{
+    transform: translateY(240px);
+   
+   
+}
+.positionMid:hover  ~ .backParal{
+    transform: translate(60px , 150px  ) ;
+   
+  
+}
+.positionBot:hover  ~ .backParal{
+    transform: translateY(60px);
+   
+  
+}
+
+.frontParal:hover{background-color: red;}
+
+
+
+.frontParal {
+    z-index: 5;
+    width: 350px;
     height: 150px;
-    background-color: azure;
-    border-radius: 35px;
-    margin-bottom: 30px;
-    cursor: pointer;
-    transition: all 0.5s ease;
-}
-
-/* id on checkbox and for in label makes it clickable*/
-.clickableCard:checked + .clickableCardLabel{
-    width: 600px;
-    border-radius: 35px;
-    height: 400px;
-}
-
-.collapsedCardContext{
-    margin-top: 20px;
-}
-
-.projectLink{
-    margin-bottom: 20px;
-    transition: all 1s;
-}
-
-.clickableCardLabel:after{
-    content: 'Click for more info'; /* Non-breaking space */
     position: absolute;
-    transform: translateY(50px);
-    width: 550px;
-    height: 50px;
-    text-align: center;
-    vertical-align: middle;
-    margin-left: 10px;
+
+    background-color: green;
+    transition: all 1.5s ease;
+    transform: translateY(150px);
+  
+
+}
+
+.midParal {
+    z-index: 4;
+    width: 350px;
+    height: 150px;
+    position: absolute;
+    
+    transition: all 1s ease;
+    background-color: greenyellow;
+    transform: translateY(140px);
+   
+}
+
+.backParal {
+    z-index: 3;
+    width: 350px;
+    height: 150px;
+    position: absolute;
+   
     transition: all 0.5s ease;
+    background-color: yellow;
+    transform: translateY(130px);
+   
 }
 
-.clickableCard:checked + .clickableCardLabel:after{
-    height: 450px;
-    content: 'This is a UI project collection that only uses pure CSS and HTML so it can be applicable to most of web development framewroks hustle free'; 
 
+.positionTop{
+    z-index: 2;
+    z-index: 12;
+    width: 450px;
+    height: 150px;
+
+    
 }
+
+.positionMid{
+    z-index: 12;
+    width: 450px;
+    height: 150px;
+    
+}
+
+.positionBot{
+    z-index: 12;
+    width: 450px;
+    height: 150px;
+    
+}
+
+
+
