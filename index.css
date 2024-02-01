@@ -104,7 +104,7 @@ body {
 .clickableCard:checked + .clickableCardLabel{
     width: 600px;
     border-radius: 35px;
-    height: 600px;
+    height: 400px;
 }
 
 .collapsedCardContext{
@@ -131,5 +131,11 @@ body {
 .clickableCard:checked + .clickableCardLabel:after{
     height: 450px;
     content: 'This is a UI project collection that only uses pure CSS and HTML so it can be applicable to most of web development framewroks hustle free'; 
+
+}
+
+#clickableCard2:checked + #clickableCardLabel2:after{
+    height: 450px;
+    content: 'This is my twist for challanges on 100DaysCSS'; 
 
 }
