@@ -50,10 +50,7 @@ html {
 }
 
 
-/* Hide scrollbar for chrome */
-body::-webkit-scrollbar {
-    display: none;
-}
+
 
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
@@ -62,6 +59,11 @@ body {
     scrollbar-width: none;
     /* Firefox */
 }
+
+/* hide scroll for all */
+::-webkit-scrollbar {
+    width: 0px;
+  }
 
 
 /* adds sticky bg */
