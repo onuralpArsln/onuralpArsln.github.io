@@ -81,26 +81,33 @@ body {
 }
 
 
-#buttonspace{
+.buttonspace{
     
-    display: block;
+    display: flex;
+    position: relative;
     width: 200px;
     height: 200px;
     
+    
     border: solid green 5px; 
-    background-color: red;
+   
 
 }
 
 #menubutton{
     
-    width: 100px;
-    height: 100px;
-    position: relative;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    
     top :0px;
+    left: 0px;
+    opacity: 0;
     /*
+    hidden maakes it unclickable opacity 0 enusres clickability
     visibility: hidden;
     */
+    
     
 }
 
@@ -110,8 +117,9 @@ body {
     margin: 10px;
     width: 200px;
     height: 200px;
-    position: relative;
+    position: absolute;
     top :0px;
+    left: 0px;
     
     display: block;
 
@@ -121,11 +129,27 @@ body {
     transition: all 0.3s;
     border-top : solid red 4px;
     border-bottom: solid red 4px;
+    justify-content: center;
 }
 
 
 #menubutton:checked + .menubuttonlabel {
     height: 0px;
+    top:100px;
     transform: rotate(45deg);
+
+}
+
+.menubuttonlabel::after{
+    /* content olmadan göremezsin */
+    content: "";
+    height: 5px;
+    width: 160px;
+    position: absolute;
+    display: block;
+    background-color: red;
+    top: 100px;
+    left : 20px;
+
 
 }
