@@ -162,3 +162,41 @@ body {
     height: 10px;
 
 }
+
+
+
+
+
+.poly{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+  
+  
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    /* it gives x y points   (50% 0%): Top vertex of the diamond, 
+    positioned at 50% of the width and 0% of the height of the clipping box. */
+    transition: all 0.5s;
+   
+}
+
+
+.poly:hover{clip-path: polygon(40% 10%, 90% 40%, 70% 70%, 0 50%);
+background-color: red;
+
+
+
+}
+
+
+.pyraContain{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 300px;
+    filter: drop-shadow( 6px 4px red);
+}
+
+
+.sky{ height: 250px; width: 300px; background-color: skyblue;}
+.sands{height: 50px; width: 300px; background-color: sandybrown}
