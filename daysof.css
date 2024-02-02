@@ -89,7 +89,7 @@ body {
     height: 200px;
     
     
-    border: solid green 5px; 
+     
    
 
 }
@@ -116,7 +116,7 @@ body {
 .menubuttonlabel {
     margin: 10px;
     width: 200px;
-    height: 200px;
+    height: 160px;
     position: absolute;
     top :0px;
     left: 0px;
@@ -127,15 +127,15 @@ body {
     cursor: pointer;
     
     transition: all 0.3s;
-    border-top : solid red 4px;
-    border-bottom: solid red 4px;
+    border-top : solid red 5px;
+    border-bottom: solid red 5px;
     justify-content: center;
 }
 
 
 #menubutton:checked + .menubuttonlabel {
     height: 0px;
-    top:100px;
+    top:80px;
     transform: rotate(45deg);
 
 }
@@ -148,8 +148,17 @@ body {
     position: absolute;
     display: block;
     background-color: red;
-    top: 100px;
+    top: 80px;
     left : 20px;
+    transition: all 0.5s;
+}
 
+
+#menubutton:checked + .menubuttonlabel::after{
+    transform: rotate(90deg);
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 10px;
 
 }
