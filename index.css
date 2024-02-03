@@ -135,7 +135,24 @@ body {
 }
 
 #clickableCard2:checked + #clickableCardLabel2:after{
-    height: 450px;
+    /*height: 450px; */
     content: 'This is my twist for challanges on 100DaysCSS'; 
 
 }
+
+.projectarrow{
+    background: linear-gradient(27deg, rgba(153,1,172,1) 0%, rgba(47,47,199,1) 24%, rgba(0,212,255,0.8) 100%);
+    color: white;
+    text-align: center;
+    vertical-align: center;
+    justify-content: center;
+
+    width: 150px;
+    height: 25px;
+    border-radius: 10px;
+    transition: all 0.5s ease; 
+    overflow: hidden;
+}
+
+
+
