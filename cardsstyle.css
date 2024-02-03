@@ -343,9 +343,9 @@ body {
 
 
 #wayarrow{
-    width: 10px;
-    height: 10px;
-    /*visibility: hidden;*/
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
 }
 
 .wayarrowlabel{
@@ -365,4 +365,8 @@ body {
 
 #wayarrow:checked + .wayarrowlabel{
     background-color: red;
+
 }
+
+.wayarrowlabel:active{
+background-color: green;}

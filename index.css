@@ -96,7 +96,7 @@ body {
     background-color: azure;
     border-radius: 35px;
     margin-bottom: 30px;
-    cursor: pointer;
+    
     transition: all 0.5s ease;
     box-shadow: 0px 0px 10px 10px rgba(0, 255, 255, 0.341);
   /* in order: x offset, y offset, blur size, spread size, color */
@@ -145,6 +145,7 @@ body {
 }
 
 .projectarrow{
+    cursor: pointer;
     background: linear-gradient(27deg, rgba(153,1,172,1) 0%, rgba(47,47,199,1) 24%, rgba(0,212,255,0.8) 100%);
     color: white;
     text-align: center;
