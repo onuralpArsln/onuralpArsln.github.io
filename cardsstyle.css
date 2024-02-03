@@ -342,3 +342,17 @@ body {
 
 
 
+#wayarrow{
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+}
+
+.wayarrowlabel{
+    width: 450px;
+    display: block;
+    /*  display block makes block visible element like */
+    height: 150px;
+    background-color: #d8860b;
+    clip-path: polygon(0 25% , 0 50% , 75% 50% , 75% 100% , 100% 55%);
+}
