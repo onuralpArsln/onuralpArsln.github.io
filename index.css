@@ -145,11 +145,7 @@ body {
 }
 
 
-#clickableCard3:checked + #clickableCardLabel3:after{
-    /*height: 450px; */
-    content: 'Altough  pure css and html is great being able to add some functionalty to it never hurts, most uiframework already has such  methods '; 
 
-}
 
 .projectarrow{
     cursor: pointer;
