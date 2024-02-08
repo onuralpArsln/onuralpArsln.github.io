@@ -8,6 +8,7 @@
     // Send a GET request to the API endpoint
     fetch('https://paranceys-cool-api.cyclic.app/name')
         .then(response => {
+            console.log(response);
             // Check if the response is successful
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -16,8 +17,9 @@
             return response.json();
         })
         .then(data => {
+            console.log(data);
             // Update the paragraph element with the random number
-            document.getElementById('apiNameAnswer').textContent = `Api answer is : ${data}`;
+            document.getElementById('apiNameAnswer').textContent = `Api answer is : ${data.name}`;
         })
         .catch(error => {
             // Handle any errors
