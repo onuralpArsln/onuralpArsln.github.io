@@ -6,7 +6,7 @@
     // if fetch gets cors error 
     // npm install cors
     // Send a GET request to the API endpoint
-    fetch('https://paranceys-cool-api.cyclic.app/name')
+    fetch('https://smoggy-kilt-slug.cyclic.app/name')
         .then(response => {
             console.log(response);
             // Check if the response is successful
