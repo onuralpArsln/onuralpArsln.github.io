@@ -1,13 +1,15 @@
 
 
-  // Function to handle the button click event
-  function getName() {
-   
+// Function to handle the button click event
+function getName() {
+
+    console.log(" script called");
     // if fetch gets cors error 
     // npm install cors
     // Send a GET request to the API endpoint
-    fetch('https://smoggy-kilt-slug.cyclic.app/name')
+    fetch('https://sleepy-hose-tuna.cyclic.app/name')
         .then(response => {
+
             console.log(response);
             // Check if the response is successful
             if (!response.ok) {
