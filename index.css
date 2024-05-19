@@ -148,7 +148,7 @@ body {
 
 #clickableCard4:checked+#clickableCardLabel4:after {
     /*height: 450px; */
-    content: 'This is a single file html field with visibal css block to allow real time css testing ';
+    content: 'This is a single file html field with displayed css block to allow real time css testing ';
 
 }
 
