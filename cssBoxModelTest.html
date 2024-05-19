@@ -12,85 +12,120 @@
 </head>
 
 <body>
-    <style contenteditable style="display: block; white-space: pre">
-        /*     How to use 
-
-            Given css block is editable 
-            At the end of the page you can find the divs
-            You can edit the middle div with editting class testdiv 
-            A div with class container cointains the other divs to test flex box 
-        */
-        /* You can define variables in css  */
-        :root {
-            --default-height: 100px;
-            --default-width: 200px;
-        }
-
-        /* This effects all elements  */
-        * {
-            transition: all 0.5s;
-        }
-
-        html {
-            background-color: aquamarine;
-            color: black;
-            font-size: 20px;
-        }
-
-        /* use var() for variables  */
-        .testdiv {
-            border: solid salmon 5px;
-            border-radius: 5px;
-            height: var(--default-height);
-            width: var(--default-width);
-            margin: 10px;
-        }
-
-        .testdiv:hover {
-            background-color: blue;
-        }
-
-        /* use calc() allows mathematical operations for dimensions  */
-        .container {
-            padding: 10 px;
-            margin: 10px;
-            border: solid red 5px;
-            height: auto;
-            width: auto;
-            max-height: calc(var(--default-height) * 3 + 50px);
-            max-width: calc(var(--default-width) * 3 + 50px);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-        }
-    </style>
-
-    <div class="container">
-        <div class="defaultdiv" style="
-          border: solid salmon 5px;
-          border-radius: 5px;
-          height: var(--default-height);
-          width: var(--default-width);
-          margin: 10px;
+    <a href="index.html">
+        <div style="
+          text-align: center;
+          font-size: 60px;
+          color: grey;
+          width: 90%;
+          padding: 40px;
+          padding-bottom: 90px;
         ">
-            This is a default div number 1
+            CSS Box Model Test Ground
         </div>
+    </a>
 
-        <div class="testdiv">This is The test div</div>
 
-        <div class="defaultdiv" style="
-          border: solid salmon 5px;
-          border-radius: 5px;
-          height: var(--default-height);
-          width: var(--default-width);
-          margin: 10px;
-        ">
-            This is a default div number 2
-        </div>
+    <div style="margin-left: 5px; margin-bottom: 15px;">
+        How to use <br><br>
+
+        Given css block is editable<br>
+        At the end of the page you can find the divs<br>
+        You can edit the middle div with editting class testdiv<br>
+        A div with class container cointains the other divs to test flex box<br>
+
     </div>
 
-    <div class="spec" style="height: 120 px; width: 10px; border: 0px"></div>
+    <div
+        style="display: flex; flex-direction: row;  align-content: center; max-width: 90%;margin-left: 5%; justify-content: space-between;">
+
+
+        <style contenteditable style="
+        display: block;
+        white-space: pre;
+        border: solid 5px;
+        border-radius: 15px;
+        
+        
+        margin-top: 10px;
+        min-width: 40%;
+        max-width: 60%;
+        background-color: azure;
+      ">
+            /* You can define variables in css  */
+            :root {
+                --default-height: 100px;
+                --default-width: 200px;
+            }
+
+            /* This effects all elements  */
+            * {
+                transition: all 0.5s;
+            }
+
+            html {
+                background-color: aquamarine;
+                color: black;
+                font-size: 20px;
+            }
+
+            /* use var() for variables  */
+            .testdiv {
+                border: solid salmon 5px;
+                border-radius: 5px;
+                height: var(--default-height);
+                width: var(--default-width);
+                margin: 10px;
+            }
+
+            .testdiv:hover {
+                background-color: blue;
+            }
+
+            /* use calc() allows mathematical operations for dimensions  */
+            .container {
+                padding: 10 px;
+                margin: 10px;
+                border: solid red 5px;
+                height: auto;
+                width: auto;
+                max-height: calc(var(--default-height) * 3 + 50px);
+                max-width: calc(var(--default-width) * 3 + 50px);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        </style>
+
+        <div class="container">
+            <div class="defaultdiv" style="
+          border: solid salmon 5px;
+          border-radius: 5px;
+          height: var(--default-height);
+          width: var(--default-width);
+          margin: 10px;
+        ">
+                This is a default div number 1
+            </div>
+
+            <div class="testdiv">This is The test div</div>
+
+            <div class="defaultdiv" style="
+          border: solid salmon 5px;
+          border-radius: 5px;
+          height: var(--default-height);
+          width: var(--default-width);
+          margin: 10px;
+        ">
+                This is a default div number 2
+            </div>
+        </div>
+
+
+        <div style="width:auto ;"></div>
+
+    </div>
+
 </body>
 
 </html>
