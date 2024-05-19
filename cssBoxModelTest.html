@@ -13,9 +13,18 @@
 
 <body>
     <style contenteditable style="display: block; white-space: pre;">
+        /* You can define variables in css  */
+        :root {
+            --default-height: 30px;
+
+        }
+
+
+        /* This effects all elemnts  */
         * {
             transition: all 0.5s;
         }
+
 
         html {
             background-color: aquamarine;
@@ -24,29 +33,42 @@
 
         }
 
+        /* use var() for variables  */
         div {
             border: solid salmon 5px;
             border-radius: 5px;
             height: 30px;
             width: 200px;
         }
+
+        .container {
+            border: solid red 5px;
+            height: 500px;
+        }
     </style>
 
-    <div>
-        This is a default  div
+    <div class="container">
+        <div>
+            This is a default div
+        </div>
+
+        <div class="testdiv">
+            This is The test div
+        </div>
+
+        <div>
+            This is a default div
+        </div>
     </div>
 
-    <div class="testdiv">
-        This is The test div
-    </div>
-
-    <div>
-        This is a default div
-    </div>
+    <div class="spec" style="height: 120 px; width: 10px;"> mera </div>
 
     <h1> How to use </h1>
 
-    <h3> Given css block is editable you can edit the middle div with editting class testdiv</h3>
+    <h3> Given css block is editable <h3>
+            <h3> You can edit the middle div with editting class testdiv </h3>
+            <h3> A div with class container cointains the other divs to test flex box </h3>
+
 
 </body>
 
