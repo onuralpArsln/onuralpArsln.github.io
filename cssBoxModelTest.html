@@ -3,44 +3,38 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
 </head>
 
 <body>
-    <style contenteditable style="display: block; white-space: pre;">
+    <style contenteditable style="display: block; white-space: pre">
         /*     How to use 
 
             Given css block is editable 
             At the end of the page you can find the divs
             You can edit the middle div with editting class testdiv 
             A div with class container cointains the other divs to test flex box 
-  */
-
-
+        */
         /* You can define variables in css  */
-
         :root {
             --default-height: 100px;
             --default-width: 200px;
         }
-
 
         /* This effects all elements  */
         * {
             transition: all 0.5s;
         }
 
-
         html {
             background-color: aquamarine;
             color: black;
             font-size: 20px;
-
         }
 
         /* use var() for variables  */
@@ -50,13 +44,10 @@
             height: var(--default-height);
             width: var(--default-width);
             margin: 10px;
-
         }
 
         .testdiv:hover {
             background-color: blue;
-
-
         }
 
         /* use calc() allows mathematical operations for dimensions  */
@@ -64,41 +55,38 @@
             padding: 10 px;
             margin: 10px;
             border: solid red 5px;
-            max-height: calc(var(--default-height)*3 + 50px);
-            max-width: calc(var(--default-width)*3 + 50px);
+            max-height: calc(var(--default-height) * 3 + 50px);
+            max-width: calc(var(--default-width) * 3 + 50px);
             display: flex;
             flex-direction: column;
         }
     </style>
 
     <div class="container">
-        <div class="defaultdiv" style="border: solid salmon 5px;
-            border-radius: 5px;
-            height: var(--default-height);
-            width: var(--default-width);
-            margin: 10px; ">
+        <div class="defaultdiv" style="
+          border: solid salmon 5px;
+          border-radius: 5px;
+          height: var(--default-height);
+          width: var(--default-width);
+          margin: 10px;
+        ">
             This is a default div number 1
         </div>
 
-        <div class="testdiv">
-            This is The test div
-        </div>
+        <div class="testdiv">This is The test div</div>
 
-        <div class="defaultdiv" style="  border: solid salmon 5px;
-            border-radius: 5px;
-            height: var(--default-height);
-            width: var(--default-width);
-            margin: 10px; ">
+        <div class="defaultdiv" style="
+          border: solid salmon 5px;
+          border-radius: 5px;
+          height: var(--default-height);
+          width: var(--default-width);
+          margin: 10px;
+        ">
             This is a default div number 2
         </div>
     </div>
 
-    <div class="spec" style="height: 120 px; width: 10px; border:0px;"> </div>
-
-
-
-
-
+    <div class="spec" style="height: 120 px; width: 10px; border: 0px"></div>
 </body>
 
 </html>
