@@ -13,14 +13,24 @@
 
 <body>
     <style contenteditable style="display: block; white-space: pre;">
-        /* You can define variables in css  */
-        :root {
-            --default-height: 30px;
+        /*     How to use 
 
+            Given css block is editable 
+            At the end of the page you can find the divs
+            You can edit the middle div with editting class testdiv 
+            A div with class container cointains the other divs to test flex box 
+  */
+
+
+        /* You can define variables in css  */
+
+        :root {
+            --default-height: 100px;
+            --default-width: 200px;
         }
 
 
-        /* This effects all elemnts  */
+        /* This effects all elements  */
         * {
             transition: all 0.5s;
         }
@@ -34,40 +44,59 @@
         }
 
         /* use var() for variables  */
-        div {
+        .testdiv {
             border: solid salmon 5px;
             border-radius: 5px;
-            height: 30px;
-            width: 200px;
+            height: var(--default-height);
+            width: var(--default-width);
+            margin: 10px;
+
         }
 
+        .testdiv:hover {
+            background-color: blue;
+
+
+        }
+
+        /* use calc() allows mathematical operations for dimensions  */
         .container {
+            padding: 10 px;
+            margin: 10px;
             border: solid red 5px;
-            height: 500px;
+            max-height: calc(var(--default-height)*3 + 50px);
+            max-width: calc(var(--default-width)*3 + 50px);
+            display: flex;
+            flex-direction: column;
         }
     </style>
 
     <div class="container">
-        <div>
-            This is a default div
+        <div class="defaultdiv" style="border: solid salmon 5px;
+            border-radius: 5px;
+            height: var(--default-height);
+            width: var(--default-width);
+            margin: 10px; ">
+            This is a default div number 1
         </div>
 
         <div class="testdiv">
             This is The test div
         </div>
 
-        <div>
-            This is a default div
+        <div class="defaultdiv" style="  border: solid salmon 5px;
+            border-radius: 5px;
+            height: var(--default-height);
+            width: var(--default-width);
+            margin: 10px; ">
+            This is a default div number 2
         </div>
     </div>
 
-    <div class="spec" style="height: 120 px; width: 10px;"> mera </div>
+    <div class="spec" style="height: 120 px; width: 10px; border:0px;"> </div>
 
-    <h1> How to use </h1>
 
-    <h3> Given css block is editable <h3>
-            <h3> You can edit the middle div with editting class testdiv </h3>
-            <h3> A div with class container cointains the other divs to test flex box </h3>
+
 
 
 </body>
