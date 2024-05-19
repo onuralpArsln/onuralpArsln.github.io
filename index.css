@@ -146,6 +146,14 @@ body {
 
 
 
+#clickableCard4:checked+#clickableCardLabel2:after {
+    /*height: 450px; */
+    content: 'This is a single file html field with visibal css block to allow real time css testing ';
+
+}
+
+
+
 
 .projectarrow{
     cursor: pointer;
