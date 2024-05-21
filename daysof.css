@@ -175,7 +175,7 @@ body {
 }
 .pyraEye {
   background: white;
-  z-index: 10;
+  z-index: 1;
   position: absolute;
   bottom: 40px;
   right: 70px;
@@ -230,4 +230,7 @@ body {
 
 .pyraContain:hover .pyraTop {
   bottom: 120px;
+}
+.pyraContain:hover .pyraEye {
+  bottom: 85px;
 }
