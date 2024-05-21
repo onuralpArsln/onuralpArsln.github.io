@@ -190,7 +190,7 @@ body {
   background-color: black;
   width: 10px;
   height: 10px;
-  transform: translate(25px, 5px);
+  transform: translate(45px, 5px);
   border-radius: 50%;
 }
 
@@ -234,4 +234,17 @@ body {
 .pyraContain:hover .pyraEye {
   bottom: 85px;
   box-shadow: 0px 0px 55px 25px rgba(171, 255, 45, 0.9);
+}
+
+.pyraContain:hover .pyraEye::after {
+  animation: eyeLeftRight 5s infinite alternate;
+}
+
+@keyframes eyeLeftRight {
+  from {
+    transform: translate(45px, 5px); /* Initial scale */
+  }
+  to {
+    transform: translate(5px, 5px); /* Final scale */
+  }
 }
