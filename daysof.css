@@ -237,7 +237,7 @@ body {
 }
 
 .pyraContain:hover .pyraEye::after {
-  animation: eyeLeftRight 5s infinite alternate;
+  animation: eyeLeftRight 5s ease-in-out infinite alternate;
 }
 
 @keyframes eyeLeftRight {
