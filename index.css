@@ -1,175 +1,158 @@
-*
-:root {
-    --tempBorder : solid red
-  }
-
+* :root {
+  --tempBorder: solid red;
+}
 
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 600px;
-
-    height: 600px;
-    background-color: azure;
-    border-radius: 5%;
-    margin-bottom: 30px;
-
+  height: 600px;
+  background-color: azure;
+  border-radius: 5%;
+  margin-bottom: 30px;
 }
 
 .namer {
-    margin-top: 20px;
-    margin-bottom: 15%;
-    font-size: large;
-    
+  margin-top: 20px;
+  margin-bottom: 15%;
+  font-size: large;
 }
 
 .banner {
-    text-align: center;
-    font-size: 60px;
-    color: white;
-    width: 100%;
-    padding: 40px;
-    padding-bottom: 90px;
+  text-align: center;
+  font-size: 60px;
+  color: white;
+  width: 100%;
+  padding: 40px;
+  padding-bottom: 90px;
 }
 
 body {
+  display: flex;
+  align-items: center;
 
-    display: flex;
-    align-items: center;
-
-    flex-direction: column;
-    z-index: 1
+  flex-direction: column;
+  z-index: 1;
 }
 
 html {
-    overflow: auto;
-    overflow-x: hidden;
+  overflow: auto;
+  overflow-x: hidden;
 }
-
-
-
 
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 /* hide scroll for all */
 ::-webkit-scrollbar {
-    width: 0px;
-  }
-
+  width: 0px;
+}
 
 /* adds sticky bg */
 .background {
-    z-index: -1;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    background: linear-gradient(rgba(153, 1, 172, 1), rgba(0, 212, 255, 1));
+  z-index: -1;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(rgba(153, 1, 172, 1), rgba(0, 212, 255, 1));
 }
 
 /* uses checkbox input as a two style clickable  */
 .clickableCard {
-    width: 0px;
-    height: 0px;
-    visibility: hidden;
-
+  width: 0px;
+  height: 0px;
+  visibility: hidden;
 }
 /* art goes into label part */
 
-.clickableCardLabel{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 600px;
-    height: 150px;
-    background-color: azure;
-    border-radius: 35px;
-    margin-bottom: 30px;
-    
-    transition: all 0.5s ease;
-    box-shadow: 0px 0px 10px 10px rgba(0, 255, 255, 0.341);
+.clickableCardLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 600px;
+  height: 150px;
+  background-color: azure;
+  border-radius: 35px;
+  margin-bottom: 30px;
+
+  transition: all 0.5s ease;
+  box-shadow: 0px 0px 10px 10px rgba(0, 255, 255, 0.341);
   /* in order: x offset, y offset, blur size, spread size, color */
 }
 
 /* id on checkbox and for in label makes it clickable*/
-.clickableCard:checked + .clickableCardLabel{
-    width: 600px;
-    border-radius: 35px;
-    height: 400px;
-    box-shadow: 0px 0px 15px 10px rgba(0, 255, 255, 0.657);
+.clickableCard:checked + .clickableCardLabel {
+  width: 600px;
+  border-radius: 35px;
+  height: 250px;
+  box-shadow: 0px 0px 15px 10px rgba(0, 255, 255, 0.657);
   /* in order: x offset, y offset, blur size, spread size, color */
 }
 
-.collapsedCardContext{
-    margin-top: 20px;
+.collapsedCardContext {
+  margin-top: 20px;
 }
 
-.projectLink{
-    margin-bottom: 20px;
-    transition: all 1s;
+.projectLink {
+  margin-bottom: 20px;
+  transition: all 1s;
 }
 
-.clickableCardLabel:after{
-    content: 'Click for more info'; /* Non-breaking space */
-    position: absolute;
-    transform: translateY(50px);
-    width: 550px;
-    height: 50px;
-    text-align: center;
-    vertical-align: middle;
-    margin-left: 10px;
-    transition: all 0.5s ease;
+.clickableCardLabel:after {
+  content: "Click for more info"; /* Non-breaking space */
+  position: absolute;
+  transform: translateY(50px);
+  width: 550px;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 10px;
+  transition: all 0.5s ease;
 }
 
-.clickableCard:checked + .clickableCardLabel:after{
-    height: 450px;
-    content: 'This is a UI project collection that only uses pure CSS and HTML so it can be applicable to most of web development framewroks hustle free'; 
-
+.clickableCard:checked + .clickableCardLabel:after {
+  /*height: 450px; */
+  content: "This is a UI project collection that only uses pure CSS and HTML so it can be applicable to most of web development framewroks hustle free";
 }
 
-#clickableCard2:checked + #clickableCardLabel2:after{
-    /*height: 450px; */
-    content: 'This is my twist for challanges on 100DaysCSS'; 
-
+#clickableCard2:checked + #clickableCardLabel2:after {
+  /*height: 450px; */
+  content: "This is my twist for challanges on 100DaysCSS";
 }
 
-
-
-#clickableCard4:checked+#clickableCardLabel4:after {
-    /*height: 450px; */
-    content: 'This is a single file html field with displayed css block to allow real time css testing ';
-
+#clickableCard4:checked + #clickableCardLabel4:after {
+  /*height: 450px; */
+  content: "This is a single file html field with displayed css block to allow real time css testing ";
 }
 
-
-
-
-.projectarrow{
-    cursor: pointer;
-    background: linear-gradient(27deg, rgba(153,1,172,1) 0%, rgba(47,47,199,1) 24%, rgba(0,212,255,0.8) 100%);
-    color: white;
-    text-align: center;
-    vertical-align: center;
-    justify-content: center;
-    font-weight: bold;
-    width: 150px;
-    height: 45px;
-    line-height: 45px;
-    border-radius: 10px;
-    transition: all 0.5s ease; 
-    overflow: hidden;
+.projectarrow {
+  cursor: pointer;
+  background: linear-gradient(
+    27deg,
+    rgba(153, 1, 172, 1) 0%,
+    rgba(47, 47, 199, 1) 24%,
+    rgba(0, 212, 255, 0.8) 100%
+  );
+  color: white;
+  text-align: center;
+  vertical-align: center;
+  justify-content: center;
+  font-weight: bold;
+  width: 150px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  overflow: hidden;
 }
-
-
-
