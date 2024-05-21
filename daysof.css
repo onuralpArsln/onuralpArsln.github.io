@@ -136,18 +136,18 @@ body {
   width: 200px;
   height: 10px;
 }
-
+/* Pyramidddddddd*/
 .pyraContain {
   display: flex;
   flex-direction: column;
   height: 300px;
   width: 300px;
-  transition: all 1s;
-  border: 5px solid red;
+  transition: all 1.2s;
+
   position: relative; /* allows childs be a relative to this parent*/
 }
 .pyraContain:hover {
-  box-shadow: 0px 0px 10px 10px red;
+  box-shadow: 0px 0px 10px 10px rgb(167, 1, 1);
 }
 
 .pyraBase {
@@ -173,6 +173,27 @@ body {
   right: 64px;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
+.pyraEye {
+  background: white;
+  z-index: 10;
+  position: absolute;
+  bottom: 40px;
+  right: 70px;
+  width: 60px;
+  height: 30px;
+  border-radius: 50% / 50%;
+  overflow: hidden; /* to hide pupil made with after element*/
+}
+.pyraEye::after {
+  display: inline-block; /* to show after*/
+  content: ""; /* to show after*/
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  transform: translate(25px, 5px);
+  border-radius: 50%;
+}
+
 .sun {
   position: absolute;
   height: 30px;
@@ -191,4 +212,22 @@ body {
   height: 50px;
   width: 300px;
   background-color: sandybrown;
+}
+
+.pyraContain > * {
+  transition: all 1s; /* Apply a 1.2-second transition to all children */
+}
+
+.pyraContain:hover .sun {
+  height: 0px;
+  width: 0px;
+  border-right: 0px solid yellow;
+  border-bottom: 0px solid yellow;
+}
+.pyraContain:hover .sky {
+  background-color: rgb(25, 71, 90);
+}
+
+.pyraContain:hover .pyraTop {
+  bottom: 120px;
 }
