@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="cssBoxModelset.css" />
+</head>
+
+<body>
+    <a href="index.html">
+        <div style="
+          text-align: center;
+          font-size: 60px;
+          color: grey;
+          width: 90%;
+          padding: 40px;
+          padding-bottom: 90px;
+        ">
+            CSS Model Test Ground
+        </div>
+    </a>
+
+    <div style="margin-left: 5px; margin-bottom: 15px">
+        How to use <br /><br />
+
+        Given css block is editable<br />
+        At the end of the page you can find the divs<br />
+        You can edit the middle div with editting class testdiv<br />
+        A div with class container cointains the other divs to test flex box<br />
+    </div>
+
+    <div class="masterFlex">
+        <style contenteditable style="
+          display: block;
+          white-space: pre;
+          border: solid 5px;
+          border-radius: 15px;
+
+          margin-top: 10px;
+          min-width: 40%;
+          max-width: 60%;
+          background-color: azure;
+        ">
+            /* You can define variables in css  */
+            :root {
+                --default-height: 100px;
+                --default-width: 200px;
+            }
+
+            /* This effects all elements  */
+            * {
+                transition: all 0.5s;
+            }
+
+            html {
+                background-color: aquamarine;
+                color: black;
+                font-size: 20px;
+            }
+
+            /* use var() for variables  */
+            .testdiv {
+                border: solid salmon 5px;
+                border-radius: 5px;
+                height: var(--default-height);
+                width: var(--default-width);
+                /* line height helps text 
+                alignment inside div */
+                line-height: var(--default-height);
+                margin: 10px;
+            }
+
+            .testdiv:hover {
+                background-color: blue;
+            }
+
+            /* use calc() allows mathematical 
+            operations for dimensions  */
+            .container {
+                padding: 10 px;
+                margin: 10px;
+                border: solid red 5px;
+                height: auto;
+                width: auto;
+                max-height: calc(var(--default-height) * 3 + 50px);
+                max-width: calc(var(--default-width) * 3 + 850px);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        </style>
+
+        <div class="container">
+            <div class="defaultdiv" style="
+            border: solid salmon 5px;
+            border-radius: 5px;
+            height: var(--default-height);
+            width: var(--default-width);
+            line-height: var(--default-height);
+            margin: 10px;
+          ">
+                Default div 1
+            </div>
+
+            <div class="testdiv">The testdiv</div>
+
+            <div class="defaultdiv" style="
+            border: solid salmon 5px;
+            border-radius: 5px;
+            height: var(--default-height);
+            width: var(--default-width);
+            line-height: var(--default-height);
+            margin: 10px;
+          ">
+                Default div 2
+            </div>
+        </div>
+
+        <div style="width: auto"></div>
+    </div>
+</body>
+
+</html>

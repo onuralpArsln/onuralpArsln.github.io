@@ -146,6 +146,14 @@ body {
 
 
 
+#clickableCard4:checked+#clickableCardLabel4:after {
+    /*height: 450px; */
+    content: 'This is a single file html field with displayed css block to allow real time css testing ';
+
+}
+
+
+
 
 .projectarrow{
     cursor: pointer;
@@ -156,7 +164,8 @@ body {
     justify-content: center;
     font-weight: bold;
     width: 150px;
-    height: 25px;
+    height: 45px;
+    line-height: 45px;
     border-radius: 10px;
     transition: all 0.5s ease; 
     overflow: hidden;
