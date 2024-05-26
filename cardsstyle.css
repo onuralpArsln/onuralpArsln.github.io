@@ -122,38 +122,48 @@ body {
   background: linear-gradient(90deg, #777, #ffcc89);
 }
 
+/* =================================Radio Magic====================================== */
 /* causes a bounce and after it needs time to settle in */
 
 .radioMagic {
   transition: all 3s;
-}
-
-.radioMagic:checked {
-  width: 1rem;
+  width: 0px;
 }
 
 .radioMagic:checked + .langSpan {
   animation: activate 2s ease-in-out 0s forwards,
-    breathing 1s ease-in-out 1s infinite alternate;
+    breathing 2s ease-in-out 1s infinite alternate;
+}
+
+.langSpan {
+  display: inline-block; /* required to make it act like div*/
+  width: 100px;
+  text-align: center;
+  line-height: 20px;
+  height: 20px;
+  border: 2px solid blue;
+  border-radius: 5px;
 }
 
 @keyframes activate {
   from {
-    background-color: green;
+    background-color: rgb(2, 215, 2);
   }
   to {
-    background-color: rgba(0, 128, 0, 0);
+    background-color: rgb(5, 107, 5);
   }
 }
 
 @keyframes breathing {
   from {
-    color: #d8860b;
+    color: #ddcfba;
   }
   to {
-    color: #8f89ff;
+    color: #768a9c;
   }
 }
+
+/* =================================Gridy Gird====================================== */
 
 .flex-container {
   margin: 10px;
@@ -191,6 +201,8 @@ body {
   content: "hello   you are hovering me ";
   display: block;
 }
+
+/* =================================Poorman Parallax====================================== */
 
 .parallaxFrame {
   border: solid rgb(200, 44, 26) 5px;
