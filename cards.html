@@ -8,7 +8,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title> Css Tricks</title>
+  <title>Css Tricks</title>
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="cardsstyle.css" />
@@ -21,8 +21,6 @@
     <div class="banner">Parancey's CSS Experiments</div>
   </a>
 
-
-
   <!--  new card -->
   <div class="card">
     <div class="namer">Dark mode toggle</div>
@@ -31,26 +29,32 @@
     <label for="darkmodetoggle" class="darkmodetogglelabel"></label>
   </div>
 
-
   <!--  new card -->
   <div class="card">
     <div class="namer">Radio Buttons Magic</div>
 
     <div>
-      <input type="radio" class="radioMagic" id="css" name="fav_language" value="CSS" />
-      <label for="css">CSS</label><br />
-    </div>
-    <div>
-      <input type="radio" class="radioMagic" id="html" name="fav_language" value="HTML" />
-      <label for="html">HTML</label><br />
+      <label for="css" class="langLabel">
+        <input type="radio" class="radioMagic" id="css" name="fav_language" value="CSS" />
+        <span class="langSpan"> CSS</span>
+      </label>
+
+
+      <label class="langLabel" for="html">
+        <input type="radio" class="radioMagic" id="html" name="fav_language" value="HTML" />
+        <span class="langSpan"> HTML </span>
+      </label>
+
+      <label class="langLabel" for="JS">
+        <input type="radio" class="radioMagic" id="JS" name="fav_language" value="HTML" />
+        <span class="langSpan"> JS </span>
+      </label>
     </div>
   </div>
 
   <!--  new card -->
 
-
   <div class="card">
-
     <div class="namer">Gridy Grid</div>
 
     <div class="flex-container">
@@ -64,49 +68,34 @@
       <div class="flex-item">23</div>
       <div class="flex-item">33</div>
     </div>
-
   </div>
-
 
   <div class="card">
-
-    <div class="namer">Poor Mans Parallax </div>
-
+    <div class="namer">Poor Mans Parallax</div>
 
     <div class="parallaxFrame">
+      <div class="positionTop"></div>
+      <div class="positionMid"></div>
+      <div class="positionBot"></div>
 
-      <div class="positionTop"> </div>
-      <div class="positionMid"> </div>
-      <div class="positionBot"> </div>
-
-
-      <div class="frontParal"> </div>
-      <div class="midParal"> </div>
-      <div class="backParal"> </div>
-
-
+      <div class="frontParal"></div>
+      <div class="midParal"></div>
+      <div class="backParal"></div>
     </div>
-
-
-
   </div>
-
-
-
-
 
   <!--  new card -->
   <div class="card">
-    <div class="namer"> Which Way? </div>
+    <div class="namer">Which Way?</div>
 
     <div>
       <div class="arrowcontainer">
-      <input type="checkbox" id="wayarrow" />
-      
-      <label for="wayarrow" class="wayarrowlabel"> </label> </div>
+        <input type="checkbox" id="wayarrow" />
+
+        <label for="wayarrow" class="wayarrowlabel"> </label>
+      </div>
     </div>
   </div>
-
 </body>
 
 </html>

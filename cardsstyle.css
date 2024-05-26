@@ -1,372 +1,327 @@
-
 :root {
-    --tempBorder : solid red
-  }
-
+  --tempBorder: solid red;
+}
 
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 600px;
-
-    height: 600px;
-    background-color: azure;
-    border-radius: 5%;
-    margin-bottom: 30px;
-
+  height: 600px;
+  background-color: azure;
+  border-radius: 5%;
+  margin-bottom: 30px;
 }
 
 .namer {
-    margin-top: 20px;
-    margin-bottom: 15%;
-    font-size: large;
-    
+  margin-top: 20px;
+  margin-bottom: 15%;
+  font-size: large;
 }
 
 .banner {
-    text-align: center;
-    font-size: 60px;
-    color: white;
-    width: 100%;
-    padding: 40px;
-    padding-bottom: 90px;
+  text-align: center;
+  font-size: 60px;
+  color: white;
+  width: 100%;
+  padding: 40px;
+  padding-bottom: 90px;
 }
 
 body {
+  display: flex;
+  align-items: center;
 
-    display: flex;
-    align-items: center;
-
-    flex-direction: column;
-    z-index: 1;
-    
+  flex-direction: column;
+  z-index: 1;
 }
 
 ::-webkit-scrollbar {
-    width: 0px;
-  }
-
-html {
-    overflow: auto;
-    overflow-x: hidden;
+  width: 0px;
 }
 
+html {
+  overflow: auto;
+  overflow-x: hidden;
+}
 
 /* Hide scrollbar for chrome */
 body::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
-
 
 /* adds sticky bg */
 .background {
-    z-index: -1;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    background: linear-gradient(rgba(153, 1, 172, 1), rgba(0, 212, 255, 1));
+  z-index: -1;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(rgba(153, 1, 172, 1), rgba(0, 212, 255, 1));
 }
 
 #darkmodetoggle {
-    width: 0px;
-    height: 0px;
-    visibility: hidden;
+  width: 0px;
+  height: 0px;
+  visibility: hidden;
 }
 
-
-
-
-
 .darkmodetogglelabel {
-    margin: 10px;
-    width: 500px;
-    height: 200px;
-    position: relative;
-    display: block;
-    background: #ebebeb;
-    border-radius: 200px;
-    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
-    cursor: pointer;
-    transition: all 0.3s;
+  margin: 10px;
+  width: 500px;
+  height: 200px;
+  position: relative;
+  display: block;
+  background: #ebebeb;
+  border-radius: 200px;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
+    inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 /* :after is psuedo child for devcorative no need to show in html */
 .darkmodetogglelabel:after {
-    content: "";
-    width: 180px;
-    height: 180px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: linear-gradient(180deg, #ffcc89, #d8860b);
-    border-radius: 180px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s;
+  content: "";
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  border-radius: 180px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
 }
 
-#darkmodetoggle:checked+.darkmodetogglelabel {
-    background: #242424;
+#darkmodetoggle:checked + .darkmodetogglelabel {
+  background: #242424;
 }
 
-
-#darkmodetoggle:checked+.darkmodetogglelabel:after {
-    background-color: #242424;
-    left: 490px;
-    transform: translate(-100%);
-    background: linear-gradient(180deg, #777, #3a3a3a);
-
+#darkmodetoggle:checked + .darkmodetogglelabel:after {
+  background-color: #242424;
+  left: 490px;
+  transform: translate(-100%);
+  background: linear-gradient(180deg, #777, #3a3a3a);
 }
 
 /* when label is clicked it is active and thus after changes shape yet it reverts back*/
 .darkmodetogglelabel:active:after {
-    width: 260px;
-    background: linear-gradient(90deg, #777, #ffcc89);
+  width: 260px;
+  background: linear-gradient(90deg, #777, #ffcc89);
 }
-
-
-
 
 /* causes a bounce and after it needs time to settle in */
 
 .radioMagic {
-    transition: all 3s;
+  transition: all 3s;
 }
 
 .radioMagic:checked {
-    width: 1rem;
+  width: 1rem;
 }
 
-.radioMagic:active {
-    margin-right: 10px;
-    width: 3rem;
-    height: 3rem;
+.radioMagic:checked + .langSpan {
+  animation: activate 2s ease-in-out 0s forwards,
+    breathing 1s ease-in-out 1s infinite alternate;
 }
 
+@keyframes activate {
+  from {
+    background-color: green;
+  }
+  to {
+    background-color: rgba(0, 128, 0, 0);
+  }
+}
 
+@keyframes breathing {
+  from {
+    color: #d8860b;
+  }
+  to {
+    color: #8f89ff;
+  }
+}
 
 .flex-container {
-    margin: 10px;
-    border: solid salmon 5px;
-    border-radius: 15px;
-    width: 500px;
-    height: 500px;
-    display: grid;
-    /* repeats colum size 60px 3 times  */
-    /*  / separtes column and row definitrion */
-    /*  auto *flow creates required amount of rows with given 80px size  */
-    grid: repeat(3, 1fr) / auto-flow 1fr;
+  margin: 10px;
+  border: solid salmon 5px;
+  border-radius: 15px;
+  width: 500px;
+  height: 500px;
+  display: grid;
+  /* repeats colum size 60px 3 times  */
+  /*  / separtes column and row definitrion */
+  /*  auto *flow creates required amount of rows with given 80px size  */
+  grid: repeat(3, 1fr) / auto-flow 1fr;
 
-
-    overflow: hidden;
-
-
+  overflow: hidden;
 }
 
 .flex-item {
-
-
-
-    border: 1px solid green;
-    transition: all 2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 2s ;
-
+  border: 1px solid green;
+  transition: all 2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 2s;
 }
 
 .flex-item:hover {
-    width: 200px;
-    height: 200px;
-    background-color: green;
+  width: 200px;
+  height: 200px;
+  background-color: green;
 }
 
 .flex-item:hover::after {
-    /*  make it new line \n doesnt work  */
+  /*  make it new line \n doesnt work  */
 
-    content: "hello   you are hovering me ";
-    display: block;
+  content: "hello   you are hovering me ";
+  display: block;
 }
-
-
 
 .parallaxFrame {
-
-
-    border: solid rgb(200, 44, 26) 5px;
-    border-radius: 15px;
-    width: 450px;
-    height: 450px;
-    display: flex;
-    flex-direction: column;
-
+  border: solid rgb(200, 44, 26) 5px;
+  border-radius: 15px;
+  width: 450px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
 }
-
-
-
-
-
 
 /*  css + adjacent sibling combinator */
 /*  css ~ adjacent sibling combinator but looser */
 
-
-.positionTop:hover  ~ .frontParal{
-    transform: translateY(170px);
-   
-   
+.positionTop:hover ~ .frontParal {
+  transform: translateY(170px);
 }
-.positionMid:hover  ~ .frontParal{
-    transform: translate( 20px , 150px ) ;
-  
+.positionMid:hover ~ .frontParal {
+  transform: translate(20px, 150px);
 }
-.positionBot:hover  ~ .frontParal{
-    transform: translateY(130px);
-   
-  
+.positionBot:hover ~ .frontParal {
+  transform: translateY(130px);
 }
 
-
-.positionTop:hover  ~ .midParal{
-    transform: translateY(200px);
-   
-   
+.positionTop:hover ~ .midParal {
+  transform: translateY(200px);
 }
-.positionMid:hover  ~ .midParal{
-    transform: translate( 40px , 150px ) ;
-
-  
+.positionMid:hover ~ .midParal {
+  transform: translate(40px, 150px);
 }
-.positionBot:hover  ~ .midParal{
-    transform: translateY(100px);
-   
-  
+.positionBot:hover ~ .midParal {
+  transform: translateY(100px);
 }
 
-
-
-
-.positionTop:hover  ~ .backParal{
-    transform: translateY(240px);
-   
-   
+.positionTop:hover ~ .backParal {
+  transform: translateY(240px);
 }
-.positionMid:hover  ~ .backParal{
-    transform: translate(60px , 150px  ) ;
-   
-  
+.positionMid:hover ~ .backParal {
+  transform: translate(60px, 150px);
 }
-.positionBot:hover  ~ .backParal{
-    transform: translateY(60px);
-   
-  
+.positionBot:hover ~ .backParal {
+  transform: translateY(60px);
 }
 
-.frontParal:hover{background-color: red;}
-
-
+.frontParal:hover {
+  background-color: red;
+}
 
 .frontParal {
-    z-index: 5;
-    width: 350px;
-    height: 150px;
-    position: absolute;
+  z-index: 5;
+  width: 350px;
+  height: 150px;
+  position: absolute;
 
-    background-color: green;
-    transition: all 1.5s ease;
-    transform: translateY(150px);
-  
-
+  background-color: green;
+  transition: all 1.5s ease;
+  transform: translateY(150px);
 }
 
 .midParal {
-    z-index: 4;
-    width: 350px;
-    height: 150px;
-    position: absolute;
-    
-    transition: all 1s ease;
-    background-color: greenyellow;
-    transform: translateY(140px);
-   
+  z-index: 4;
+  width: 350px;
+  height: 150px;
+  position: absolute;
+
+  transition: all 1s ease;
+  background-color: greenyellow;
+  transform: translateY(140px);
 }
 
 .backParal {
-    z-index: 3;
-    width: 350px;
-    height: 150px;
-    position: absolute;
-   
-    transition: all 0.5s ease;
-    background-color: yellow;
-    transform: translateY(130px);
-   
+  z-index: 3;
+  width: 350px;
+  height: 150px;
+  position: absolute;
+
+  transition: all 0.5s ease;
+  background-color: yellow;
+  transform: translateY(130px);
 }
 
-
-.positionTop{
-    z-index: 2;
-    z-index: 12;
-    width: 450px;
-    height: 150px;
-
-    
+.positionTop {
+  z-index: 2;
+  z-index: 12;
+  width: 450px;
+  height: 150px;
 }
 
-.positionMid{
-    z-index: 12;
-    width: 450px;
-    height: 150px;
-    
+.positionMid {
+  z-index: 12;
+  width: 450px;
+  height: 150px;
 }
 
-.positionBot{
-    z-index: 12;
-    width: 450px;
-    height: 150px;
-    
+.positionBot {
+  z-index: 12;
+  width: 450px;
+  height: 150px;
 }
 
-
-
-#wayarrow{
-    width: 0px;
-    height: 0px;
-    visibility: hidden;
+#wayarrow {
+  width: 0px;
+  height: 0px;
+  visibility: hidden;
 }
 
-.wayarrowlabel{
-    width: 450px;
-    display: block;
-    /*  display block makes block visible element like */
-    height: 150px;
-    background-color: #d8860b;
-    clip-path: polygon(0 33% , 0 66% , 75% 66% , 75% 100% , 100% 55%, 75% 0 , 75% 33% );
-    transition: all 0.3s;
+.wayarrowlabel {
+  width: 450px;
+  display: block;
+  /*  display block makes block visible element like */
+  height: 150px;
+  background-color: #d8860b;
+  clip-path: polygon(0 33%, 0 66%, 75% 66%, 75% 100%, 100% 55%, 75% 0, 75% 33%);
+  transition: all 0.3s;
 }
 
-.arrowcontainer:hover .wayarrowlabel{
-    clip-path: polygon(0 50% , 25% 0, 25% 33% , 100% 33% , 100% 66% , 25% 66%, 25% 100%  );
+.arrowcontainer:hover .wayarrowlabel {
+  clip-path: polygon(
+    0 50%,
+    25% 0,
+    25% 33%,
+    100% 33%,
+    100% 66%,
+    25% 66%,
+    25% 100%
+  );
 }
 
-
-#wayarrow:checked + .wayarrowlabel{
-    background-color: red;
-
+#wayarrow:checked + .wayarrowlabel {
+  background-color: red;
 }
 
-.wayarrowlabel:active{
-background-color: green;}
+.wayarrowlabel:active {
+  background-color: green;
+}
