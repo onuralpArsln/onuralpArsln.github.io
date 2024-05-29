@@ -8,7 +8,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title> API Workshop</title>
+  <title>API Workshop</title>
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="apiworks.css" />
@@ -22,40 +22,54 @@
   </a>
 
   <div class="card">
-    <div class="namer"> About API</div>
+    <div class="namer">About API</div>
 
-    <p> Due to service i use to deploy my api is shutdown no api for now</p>
-
-    <p> It is a Express API runs in node 18.12.1</p>
-    <p> Free tier cyclic.sh is used, if it is not working it is highly possible that i have deployed another api to test
-      and forgot to re-deploy this or my 1000 request monthly limit is exceeded </p>
-    <p> api domain -> <a href="https://paranceys-cool-api.cyclic.app "> https://paranceys-cool-api.cyclic.app </a> </p>
-    <p> api repo -> <a href="https://github.com/onuralpArsln/express-api">
-        https://github.com/hackerFaruk/starter-express-api </a></p>
-    <p> It is the most basic Express api but i am adding some cool tricks as i came up with ideas or just saw some cool
-      things to inspire me </p>
-
-
+    <p>Due to service i use to deploy my api is being shutdown</p>
+    <p>There is only some public api for you to enjoy</p>
+    <p>https://apipheny.io/free-api/</p>
+    <p>It is a Express API runs in node 18.12.1</p>
+    <p>
+      Free tier cyclic.sh is used, if it is not working it is highly possible
+      that i have deployed another api to test and forgot to re-deploy this or
+      my 1000 request monthly limit is exceeded
+    </p>
+    <p>
+      api domain (cyclic.sh is no more ) ->
+      <a href="https://paranceys-cool-api.cyclic.app ">
+        https://paranceys-cool-api.cyclic.app
+      </a>
+    </p>
+    <p>
+      api repo ->
+      <a href="https://github.com/onuralpArsln/express-api">
+        https://github.com/onuralpArsln/express-api</a>
+    </p>
+    <p>
+      It is the most basic Express api but i am adding some cool tricks as i
+      came up with ideas or just saw some cool things to inspire me
+    </p>
   </div>
 
+  <div class="card">
+    <div class="namer">Who Am I?</div>
+
+    <button id="apiNameButton">Click To Learn About</button>
+    <p id="apiNameAnswer"></p>
+  </div>
 
 
   <div class="card">
-    <div class="namer"> Who Am I? </div>
+    <div class="namer">Do you like cat Facts?</div>
 
-    <button id="apiNameButton"> Click To Learn About </button>
-    <p id="apiNameAnswer"></p>
-
-
+    <button id="catButton">Click To Learn About</button>
+    <div style="height: 10px;"></div>
+    <p id="catAnswer"></p>
+    <div style="height: 40px;"></div>
+    <p> Source -> https://catfact.ninja/ </p>
   </div>
-
-
-
 
   <!-- Include the JavaScript file to handle requests -->
   <script src="requestHandler.js" async defer></script>
-
-
 </body>
 
 </html>
