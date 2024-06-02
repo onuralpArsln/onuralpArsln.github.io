@@ -64,6 +64,10 @@
   <div class="card">
     <div class="namer">Nice Alerts</div>
 
+
+    <div class="alert alert-success" id="bootstrapAlert" style="display: none;">
+      This is a Bootstrap Alert! Which was hiddennnn
+    </div>
     <button class="btn btn-success" id="succesBtn"> Wanna Click me ? </button>
 
 
@@ -80,9 +84,12 @@
     $(document).ready(function () {
       $('#succesBtn').on('click', function () {
         console.log('Button clicked!');
-        alert('Button clicked!');
+        alert('This is created with boot strap');
       });
     });
+
+
+
   </script>
 
 </body>
