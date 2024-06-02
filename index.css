@@ -136,6 +136,11 @@ body {
   content: "This is a single file html field with displayed css block to allow real time css testing ";
 }
 
+#clickableCard5:checked + #clickableCardLabel5:after {
+  /*height: 450px; */
+  content: "Altough most of this project goes for pure css and html in this section i am using jquery and bootstrap";
+}
+
 .projectarrow {
   cursor: pointer;
   background: linear-gradient(
