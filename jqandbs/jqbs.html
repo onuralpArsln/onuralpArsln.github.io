@@ -88,7 +88,19 @@
       });
     });
 
-
+    $(document).ready(function () {
+      $('#successBtn').on('click', function () {
+        console.log('Button clicked!');
+        // Create Bootstrap Alert dynamically
+        var alertElement = $('<div class="alert alert-success" role="alert">This is a Bootstrap Alert!</div>');
+        // Append the alert to the body
+        $('body').append(alertElement);
+        // Automatically dismiss the alert after 3 seconds
+        setTimeout(function () {
+          alertElement.alert('close');
+        }, 3000);
+      });
+    });
 
   </script>
 
