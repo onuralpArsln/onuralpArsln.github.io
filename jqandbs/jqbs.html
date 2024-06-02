@@ -8,11 +8,21 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> Days of Twist </title>
+  <title> jQuery and Bootstrap </title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="jqbs.css">
-</head>
+
+  <!-- Bootsrap  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"> </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
 
 <body>
 
@@ -25,8 +35,36 @@
   <!--  new card   -->
 
   <div class="card">
-    <div class="namer">Menu Button</div>
+    <div class="namer">Info Card</div>
 
+    <span> This page uses cdn bootstrap and jquery</span>
+
+    <span> Use link for style sheet, then jQuery then add bootstrap jquey plugin in given order </span>
+
+    <span>
+      <pre style="margin: 10px;">
+        <code style="font-weight: 900;"> 
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css&quot;&gt;
+        &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"&gt;&lt;/script&gt;
+        </code>
+      </pre>
+    </span>
+
+
+    <span> Put those on your html head to ensure them load before your page so everything works better </span>
+
+  </div>
+
+
+
+
+  <!--  new card   -->
+
+  <div class="card">
+    <div class="namer">Nice Alerts</div>
+
+    <button class="btn btn-success" id="succesBtn"> Wanna Click me ? </button>
 
 
   </div>
@@ -36,6 +74,16 @@
 
 
 
+
+  <script>
+    // jQuery code to handle button click event
+    $(document).ready(function () {
+      $('#succesBtn').on('click', function () {
+        console.log('Button clicked!');
+        alert('Button clicked!');
+      });
+    });
+  </script>
 
 </body>
 
