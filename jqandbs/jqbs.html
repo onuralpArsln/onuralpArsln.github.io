@@ -61,7 +61,7 @@
 
   <!--  new card   -->
 
-  <div class="card">
+  <div class="card" id="bootcard">
     <div class="namer">Nice Alerts</div>
 
 
@@ -69,6 +69,7 @@
       This is a Bootstrap Alert! Which was hiddennnn
     </div>
     <button class="btn btn-success" id="succesBtn"> Wanna Click me ? </button>
+    <button class="btn btn-success" id="sadBtn"> Wanna Click me ? </button>
 
 
   </div>
@@ -82,25 +83,48 @@
   <script>
     // jQuery code to handle button click event
     $(document).ready(function () {
+
       $('#succesBtn').on('click', function () {
         console.log('Button clicked!');
         alert('This is created with boot strap');
       });
-    });
 
-    $(document).ready(function () {
-      $('#successBtn').on('click', function () {
+
+
+      $('#sadBtn').on('click', function () {
         console.log('Button clicked!');
         // Create Bootstrap Alert dynamically
-        var alertElement = $('<div class="alert alert-success" role="alert">This is a Bootstrap Alert!</div>');
+        var alertElement = $('<div class="alert alert-success" role="alert" >This is a Bootstrap Alert!</div>');
         // Append the alert to the body
-        $('body').append(alertElement);
+        $('#bootcard').append(alertElement);
         // Automatically dismiss the alert after 3 seconds
         setTimeout(function () {
           alertElement.alert('close');
-        }, 3000);
+        }, 1500);
       });
+
+
+      $('#bootcard').on("mouseenter", function () {
+        // Change color to red on mouse enter
+        $(this).css('color', 'red');
+      });
+
+      $('#bootcard').on("mouseleave", function () {
+        var alertElement = $('<div class="alert alert-success" role="alert">Did you discovered all?</div>');
+        // Append the alert to the body
+        $('#bootcard').append(alertElement);
+        // Automatically dismiss the alert after 3 seconds
+        setTimeout(function () {
+          alertElement.alert('close');
+        }, 1500);
+      });
+
+
+
+
     });
+
+
 
   </script>
 
