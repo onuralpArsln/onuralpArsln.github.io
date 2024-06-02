@@ -23,7 +23,12 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
-
+  <style>
+    .card {
+      min-height: 600px;
+    }
+  </style>
+</head>
 
 <body>
 
@@ -56,11 +61,14 @@
     <div class="alert alert-success" id="bootstrapAlert" style="display: none;">
       This is a Bootstrap Alert! Which was hiddennnn until you came here
     </div>
-    <button class="btn btn-success" id="succesBtn"> Wanna Click me ? </button>
-    <button class="btn btn-success" id="sadBtn"> Wanna Click me ? </button>
+    <div style="display: flex; flex-direction: row; ">
+      <button class="btn btn-info" style="margin: 10px;" id="succesBtn"> Wanna Click me ? </button>
+      <button class="btn btn-success" style="margin: 10px;" id="sadBtn"> Wanna Click me ? </button>
 
 
+    </div>
   </div>
+
 
 
   <!--  new card   -->
@@ -104,6 +112,7 @@
     </div>
 
   </div>
+
 
 
   <script>
