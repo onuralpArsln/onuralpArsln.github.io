@@ -88,9 +88,28 @@ body {
 
 .previewWindow {
   margin: auto;
+  display: flex;
   height: 300px;
   width: 500px;
   margin-top: 40px;
   border: solid black 2px;
   border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.carBody {
+  width: 80%;
+  height: 40%;
+  background-color: black;
+  clip-path: polygon(
+    0 75%,
+    0 50%,
+    25% 30%,
+    40% 10%,
+    70% 10%,
+    85% 35%,
+    100% 40%,
+    100% 75%
+  );
 }
