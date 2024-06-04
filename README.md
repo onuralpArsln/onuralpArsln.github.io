@@ -5,8 +5,12 @@
 
 This repo is also published as github pages
 
-It currently only uses css and html
+It consist of diffrent projects including;
 
-It aims to showcase what could be achieved with this simple tools 
+Pure CSS html projects too showcase some css tricks 
 
-All the parts build with simplest  aproaches and can easily be copy pasted into any web framework
+An api page for interracting with my api ( it might be down because of deployed service)
+
+Css testing ground a page for real time css editting to test css, it can be used for educational purposes.
+
+jQuery and bootstrap page for using popular tools in combination
