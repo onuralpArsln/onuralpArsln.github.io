@@ -102,6 +102,7 @@ body {
   width: 80%;
   height: 40%;
   background-color: black;
+  transition: all 1s;
   clip-path: polygon(
     0 75%,
     0 50%,
