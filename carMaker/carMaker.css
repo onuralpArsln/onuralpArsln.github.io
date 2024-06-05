@@ -101,7 +101,7 @@ body {
 .carBody {
   width: 80%;
   height: 40%;
-  background-color: black;
+  background-color: gray;
   transition: all 1s;
   clip-path: polygon(
     0 75%,
