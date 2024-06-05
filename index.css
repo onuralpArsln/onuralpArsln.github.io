@@ -141,6 +141,11 @@ body {
   content: "Altough most of this project goes for pure css and html in this section i am using jquery and bootstrap";
 }
 
+#clickableCard6:checked + #clickableCardLabel5:after {
+  /*height: 450px; */
+  content: "This project changes DOM elements with js to perform variable operations. It is presented in form of car editting system. Uses css html and javascript only.";
+}
+
 .projectarrow {
   cursor: pointer;
   background: linear-gradient(

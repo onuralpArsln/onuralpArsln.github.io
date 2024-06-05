@@ -26,15 +26,19 @@ function bodyChange() {
     var bodyType = document.getElementById("bodySelect").value;
 
 
-    var element = document.getElementById('carPreview');
+    var carPreview = document.getElementById('carPreview');
 
-    // Log the class list
-    console.log(element.classList);
+    // remove body clas
+    if (carPreview.classList.contains("wagon")) { carPreview.classList.remove("wagon"); }
+    if (carPreview.classList.contains("hatch")) { carPreview.classList.remove("hatch"); }
+    if (carPreview.classList.contains("sedan")) { carPreview.classList.remove("sedan"); }
 
-    // Iterate over the class list and log each class
-    element.classList.forEach(function (cls) {
-        console.log(cls);
-    });
+    carPreview.classList.add(bodyType);
+
+
+
+
+
 
 }
 
