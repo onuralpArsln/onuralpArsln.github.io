@@ -18,5 +18,26 @@ function colorChange() {
     document.getElementById("carPreview").style.backgroundColor = color;
 }
 
-
 document.getElementById("colorSelect").addEventListener('change', colorChange);
+
+
+function bodyChange() {
+
+    var bodyType = document.getElementById("bodySelect").value;
+
+
+    var element = document.getElementById('carPreview');
+
+    // Log the class list
+    console.log(element.classList);
+
+    // Iterate over the class list and log each class
+    element.classList.forEach(function (cls) {
+        console.log(cls);
+    });
+
+}
+
+document.getElementById("bodySelect").addEventListener('change', bodyChange);
+
+
