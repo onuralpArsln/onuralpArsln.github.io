@@ -143,7 +143,7 @@ body {
 
 #clickableCard6:checked + #clickableCardLabel5:after {
   /*height: 450px; */
-  content: "This project changes DOM elements with js to perform variable operations. It is presented in form of car editting system. Uses css html and javascript only.";
+  content: "This project changes DOM elements with js to perform variable operations. It is presented in form of car editting system. Uses  javascript for utilites. Bootstrap is used  for better looking buttons and menus. ";
 }
 
 .projectarrow {
