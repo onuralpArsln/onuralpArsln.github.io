@@ -96,6 +96,8 @@ body {
   border-radius: 15px;
   justify-content: center;
   align-items: center;
+  display: flex;
+  position: absolute;
 }
 
 .carBody {
@@ -117,14 +119,14 @@ body {
 
 .sedan {
   clip-path: polygon(
-    0 75%,
-    0 50%,
-    25% 30%,
-    40% 10%,
-    70% 10%,
-    85% 35%,
-    100% 40%,
-    100% 75%
+    100% 75%,
+    96% 40%,
+    75% 30%,
+    60% 10%,
+    30% 10%,
+    15% 35%,
+    5% 40%,
+    0% 75%
   );
 }
 
@@ -152,4 +154,18 @@ body {
     99% 40%,
     100% 75%
   );
+}
+.frontWheel {
+  right: 17%;
+}
+.backWheel {
+  left: 17%;
+}
+.wheel {
+  background-color: black;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 30%;
+  border-radius: 50%;
 }
